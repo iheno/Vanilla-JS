@@ -1,0 +1,1342 @@
+{\rtf1\ansi\ansicpg949\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset129 .AppleSDGothicNeoI-Regular;\f2\fnil\fcharset0 HelveticaNeue-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red220\green161\blue13;}
+{\*\expandedcolortbl;;\cssrgb\c89412\c68627\c3922;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs24 \cf0 React : 
+\f1 \'c6\'e4\'c0\'cc\'c1\'f6
+\f0  
+\f1 \'b1\'b8\'bc\'ba
+\f0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 App.js >\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 import React, \{ Component \} from \'91react\'92;\
+import \'91./App.css\'92;\
+import XXX from \'91./XXX.js\'92;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class App extends Component \{\
+    render() \{\
+	return (\
+	    <div className=\'93App\'94>\
+		<XXX />\
+	    </div>\
+	);\
+    \}\
+\}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 export default App;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 index.js >\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 imoprt React from \'91react\'92;\
+import ReactDOM from \'91react-dom\'92;\
+import \'91./index.css\'92;\
+import App from \'91./App\'92;\
+Import * as serviceWorker from \'91./serviceWorker\'92;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 ReactDOM.render(<App/ >, document.getElemetyById(\'91root));\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 serviceWorker.unregister();\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 XXX.js >\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 import React, \{ Component \} from \'91react\'92;\
+import \'91./XXX.css\'92;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class XXX extends Component\{\
+    render() \{\
+        return (\
+	    <div>\
+	    	<XXX_componet />\
+		<h1>Hello ! You !</h1>\
+	    </div>\
+	);\
+    \}\
+\}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class XXX_componet extends Component\{\
+    render() \{\
+        return (\
+	    <img src=\{ \} />\
+	);\
+    \}\
+\}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 export default XXX;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Component - render - return - JSX\
+\
+props >\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 App.js >\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 import React, \{ Component \} from \'91react\'92;\
+import \'91./App.css\'92;\
+import XXX from \'91./XXX.js\'92;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 const movies = [\
+    \'93Matrix\'94,\
+    \'93Full Metal Jacket\'94,\
+    \'93Oldboys\'94.\
+    \'93Star Wars\'94\
+]\
+\
+const movieImages = [\
+    \'93./img/\'85\'94.\
+    \'93./img/\'85\'94.\
+    \'93./img/\'85\'94.\
+    \'93./img/\'85\'94.\
+]\
+\
+class App extends Component \{\
+    render() \{\
+	return (\
+	    <div className=\'93App\'94>\
+		<XXX title=\{movies[0]\} poster=\{movieImages[0]\} />\
+		<XXX title=\{movies[1]\} poster=\{movieImages[1]\} />\
+		<XXX title=\{movies[2]\} poster=\{movieImages[2]\} />\
+		<XXX title=\{movies[3]\} poster=\{movieImages[3]\} />\
+	    </div>\
+	);\
+    \}\
+\}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 export default App;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 XXX.js >\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 import React, \{ Component \} from \'91react\'92;\
+import \'91./XXX.css\'92;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class XXX extends Component\{\
+    render() \{\
+	// console.log(this.props);\
+        return (\
+	    <div>\
+	    	<XXX_componet poster=\{this.props.poster\} />\
+		<h1>Hello ! You !</h1>\
+	    </div>\
+	);\
+    \}\
+\}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class MoviePoster entends Component \{\
+    render() \{\
+        Return (\
+	    <img src=\{this.props.poster\} alt=\'93\'94 />\
+	);\
+    \}\
+\}\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \uc0\u8232 List array.map()\u8232 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  './App.css';\
+
+\f2\i import
+\f0\i0  Movie
+\f2\i  from
+\f0\i0  './Movie.js';\
+\
+const movies = [\
+  \{\
+    title: "Matrix",\
+    poster: "https://upload.wikimedia.org/wikipedia/tr/3/36/Matrix-film.jpg"\
+  \},\
+  \{\
+    title: "Full Metal Jacket",\
+    poster: "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Full_Metal_Jacket_poster.jpg/220px-Full_Metal_Jacket_poster.jpg"\
+  \},\
+  \{\
+    title: "Oldboy",\
+    poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"\
+  \},\
+  \{\
+    title:  "Star Wars",\
+    poster: "https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/01/celebration-chicago-key-art-720x1066.jpg"\
+  \}\
+]\
+\
+class App extends Component \{\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{movies.map((movie, movieIndex) => \{\
+
+\f2\i           return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+        \})\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1 \cf0 \'b8\'ae\'bf\'a2\'c6\'ae\'b4\'c2
+\f0  
+\f1 \'bf\'a4\'b8\'ae\'b8\'d5\'c6\'ae\'b0\'a1
+\f0  
+\f1 \'b8\'b9\'c0\'bb\'b6\'a7
+\f0  Key
+\f1 \'b8\'a6
+\f0  
+\f1 \'c1\'d6\'be\'ee\'be\'df
+\f0  
+\f1 \'c7\'d1\'b4\'d9
+\f0 .\uc0\u8232 \u8232 \
+\
+PropTypes (
+\f1 \'b9\'ae\'c0\'da\'c7\'fc
+\f0  / 
+\f1 \'bc\'fd\'c0\'da\'c7\'fc\'c0\'c7
+\f0  
+\f1 \'c2\'fc\'b0\'c5\'c1\'fe
+\f0  
+\f1 \'c6\'c7\'b4\'dc
+\f0 )\
+\
+git > yarn add prop-types\uc0\u8232 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  PropTypes
+\f2\i  from
+\f0\i0  'prop-types';\
+
+\f2\i import
+\f0\i0  './Movie.css';\
+\
+class Movie extends Component\{\
+\
+  static propTypes = \{\
+    title: PropTypes.string.isRequired,\
+    poster: PropTypes.string\
+  \}\
+\
+  render() \{\
+
+\f2\i     // console.log(this.props);
+\f0\i0 \
+
+\f2\i     return
+\f0\i0  (\
+      <div>\
+        <MoviePoster 
+\f2\i poster
+\f0\i0 =\{
+\f2\i this
+\f0\i0 .props.poster\} />\
+        <h1>\{
+\f2\i this
+\f0\i0 .props.title\}</h1>\
+      </div>\
+    );\
+  \}\
+\}\
+\
+class MoviePoster extends Component\{\
+\
+  static propTypes = \{\
+    poster: PropTypes.string.isRequired\
+  \}\
+  \
+  render() \{\
+
+\f2\i     // console.log(this.props);
+\f0\i0 \
+
+\f2\i     return
+\f0\i0 (\
+      <img 
+\f2\i src
+\f0\i0 =\{
+\f2\i this
+\f0\i0 .props.poster\} 
+\f2\i alt
+\f0\i0 ="" />\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  Movie;\
+\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1 \cf0 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae
+\f0  
+\f1 \'b6\'f3\'c0\'cc\'c7\'c1\'bd\'ce\'c0\'cc\'c5\'ac
+\f0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+
+\f1 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'b0\'a1
+\f0  \'91
+\f1 \'c1\'b8\'c0\'e7
+\f0 \'92
+\f1 \'c7\'cf\'b1\'e2
+\f0  
+\f1 \'bd\'c3\'c0\'db\'c7\'cf\'b8\'e9
+\f0 , 
+\f1 \'b8\'ae\'be\'d7\'c6\'ae
+\f0  
+\f1 \'bc\'bc\'b0\'e8\'b4\'c2
+\f0  will mount - > did render -> did mount 
+\f1 \'b8\'a6
+\f0  
+\f1 \'c7\'d1\'b4\'d9
+\f0 .\
+\
+render life cycle ->\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+\
+class App extends Component \{\
+\
+  componentWillMount() \{\
+    console.log('will mount')\
+  \}\
+\
+  componentDidMount() \{\
+    console.log('did mount')\
+  \}\
+\
+  render() \{\
+    console.log('did render')\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{movies.map((movie, movieIndex) => \{\
+
+\f2\i           return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+        \})\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 update life cycle ->\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 state\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 state
+\f1 \'b8\'a6
+\f0  
+\f1 \'ba\'af\'b0\'e6\'c7\'cf\'b8\'e9
+\f0  render
+\f1 \'c0\'cc
+\f0  
+\f1 \'b4\'d9\'bd\'c3
+\f0  
+\f1 \'c0\'db\'b5\'bf\'c7\'d1\'b4\'d9
+\f0 . 
+\f1 \'bb\'f5\'b7\'ce\'bf\'ee
+\f0  state
+\f1 \'bf\'cd
+\f0  
+\f1 \'c7\'d4\'b2\'b2
+\f0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class App extends Component \{\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\
+    greeting: 'hello'\
+  \}\
+\
+  componentDidMount() \{\
+    setTimeout(() => \{\
+
+\f2\i       this
+\f0\i0 .setState(\{\
+        greeting: 'hello again!'\
+      \})\
+    \}, 2000);\
+  \}\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.greeting\}\
+        \{movies.map((movie, movieIndex) => \{\
+
+\f2\i           return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+        \})\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 state add contents\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 class App extends Component \{\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\
+    movies: [\
+      \{\
+        title: "Matrix",\
+        poster: "https://upload.wikimedia.org/wikipedia/tr/3/36/Matrix-film.jpg"\
+      \},\
+      \{\
+        title: "Full Metal Jacket",\
+        poster: "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Full_Metal_Jacket_poster.jpg/220px-Full_Metal_Jacket_poster.jpg"\
+      \},\
+      \{\
+        title: "Oldboy",\
+        poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"\
+      \},\
+      \{\
+        title:  "Star Wars",\
+        poster: "https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/01/celebration-chicago-key-art-720x1066.jpg"\
+      \}\
+    ]\
+  \}\
+\
+  componentDidMount() \{\
+    setTimeout(() => \{\
+
+\f2\i       this
+\f0\i0 .setState(\{\
+        movies: [\
+          ...
+\f2\i this
+\f0\i0 .state.movies,\
+          \{\
+            title: "super man",\
+            poster: "https://www.sideshow.com/storage/product-images/903305/super-powers-superman_dc-comics_gallery_5c4d07bcf32e0.jpg"\
+          \}\
+        ]\
+      \})     \
+    \}, 3000);\
+  \}\
+  \
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.movies.map((movie, movieIndex) => \{\
+
+\f2\i           return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+        \})\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Lading states\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 *
+\f1 \'b8\'ae\'be\'d7\'c6\'ae\'b4\'c2
+\f0  
+\f1 \'c0\'da\'c3\'bc\'b1\'e2\'b4\'c9\'c0\'cc
+\f0  
+\f1 \'b8\'b9\'b1\'e2
+\f0  
+\f1 \'b6\'a7\'b9\'ae\'bf\'a1
+\f0  
+\f1 \'c0\'da\'bd\'c5\'c0\'cc
+\f0  
+\f1 \'b8\'b8\'b5\'e7
+\f0  
+\f1 \'b1\'e2\'b4\'c9\'b0\'fa
+\f0  
+\f1 \'c2\'f7\'c0\'cc\'b8\'a6
+\f0  
+\f1 \'b5\'ce\'b1\'e2
+\f0  
+\f1 \'c0\'a7\'c7\'d8\'bc\'ad
+\f0  
+\f1 \'b3\'aa\'c0\'c7
+\f0  
+\f1 \'b1\'e2\'b4\'c9\'c0\'ba
+\f0  
+\f1 \'be\'f0\'b4\'f5\'bd\'ba\'c4\'da\'be\'ee\'b7\'ce
+\f0  
+\f1 \'bd\'c3\'c0\'db\'c7\'cf\'b1\'e2
+\f0  \
+
+\f1 \'bf\'b9
+\f0 )_renderMovies\uc0\u8232 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  './App.css';\
+
+\f2\i import
+\f0\i0  Movie
+\f2\i  from
+\f0\i0  './Movie.js';\
+\
+class App extends Component \{\
+\
+
+\f2\i   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\
+  \}\
+\
+  componentDidMount() \{\
+    setTimeout(() => \{\
+
+\f2\i       this
+\f0\i0 .setState(\{\
+        movies: [\
+          \{\
+            title: "Matrix",\
+            poster: "https://upload.wikimedia.org/wikipedia/tr/3/36/Matrix-film.jpg"\
+          \},\
+          \{\
+            title: "Full Metal Jacket",\
+            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Full_Metal_Jacket_poster.jpg/220px-Full_Metal_Jacket_poster.jpg"\
+          \},\
+          \{\
+            title: "Oldboy",\
+            poster: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg"\
+          \},\
+          \{\
+            title:  "Star Wars",\
+            poster: "https://oyster.ignimgs.com/wordpress/stg.ign.com/2019/01/celebration-chicago-key-art-720x1066.jpg"\
+          \},\
+          \{\
+            title: "super man",\
+            poster: "https://www.sideshow.com/storage/product-images/903305/super-powers-superman_dc-comics_gallery_5c4d07bcf32e0.jpg"\
+          \}\
+        ]\
+      \})     \
+    \}, 1000);\
+  \}\
+  \
+  _renderMoives = () => \{\
+    const movies =
+\f2\i  this
+\f0\i0 .state.movies.map((movie, movieIndex) => \{\
+
+\f2\i       return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+    \})\
+
+\f2\i     return
+\f0\i0  movies\
+  \}\
+\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.movies ?
+\f2\i  this
+\f0\i0 ._renderMoives() : 'loading...'\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Stateless functional\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  PropTypes
+\f2\i  from
+\f0\i0  'prop-types';\
+
+\f2\i import
+\f0\i0  './Movie.css';\
+\
+\
+function Movie(\{poster, title\}) \{\
+
+\f2\i   return
+\f0\i0  (\
+    <div>\
+      <MoviePoster 
+\f2\i poster
+\f0\i0 =\{poster\} />\
+      <h1>\{title\}</h1>\
+    </div>\
+  );\
+\}\
+\
+function MoviePoster(\{poster\}) \{\
+
+\f2\i   return
+\f0\i0  (\
+    <img 
+\f2\i src
+\f0\i0 =\{poster\} 
+\f2\i alt
+\f0\i0 ="" />\
+  );\
+\}\
+\
+Movie.propTypes = \{\
+  title: PropTypes.string.isRequired,\
+  poster: PropTypes.string.isRequired\
+\}\
+\
+MoviePoster.propTypes = \{\
+  poster: PropTypes.string.isRequired\
+\}\
+\
+\
+
+\f2\i export default
+\f0\i0  Movie;\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 ajax\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Asynchronous JavaScript and XM\
+\pard\pardeftab560\slleading20\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://yts.am/api/v2/list_movies.json"}}{\fldrslt \cf2 \ul \ulc2 https://yts.am/api/v2/list_movies.json}}\ul   ->\
+{\field{\*\fldinst{HYPERLINK "https://yts.am/api/v2/list_movies.json"}}{\fldrslt \cf2 \ulc2 https://yts.am/api/v2/list_movies.json}}?sort_by=rating\ulnone \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  './App.css';\
+
+\f2\i import
+\f0\i0  Movie
+\f2\i  from
+\f0\i0  './Movie.js';\
+\
+class App extends Component \{\
+\
+
+\f2\i   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\}\
+\
+  componentDidMount() \{\
+    console.log(fetch('https://yts.am/api/v2/list_movies.json?sort_by=rating'))\
+  \}\
+  \
+  _renderMoives = () => \{\
+    const movies =
+\f2\i  this
+\f0\i0 .state.movies.map((movie, movieIndex) => \{\
+
+\f2\i       return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+    \})\
+
+\f2\i     return
+\f0\i0  movies\
+  \}\
+\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.movies ?
+\f2\i  this
+\f0\i0 ._renderMoives() : 'loading...'\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\
+promise\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1 \cf0 \'bb\'f5\'b7\'ce\'bf\'ee
+\f0  
+\f1 \'c0\'da\'b9\'d9\'bd\'ba\'c5\'a9\'b8\'b3\'c6\'ae
+\f0  
+\f1 \'c4\'c1\'bc\'c1
+\f0  = asynchronous programming\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  './App.css';\
+
+\f2\i import
+\f0\i0  Movie
+\f2\i  from
+\f0\i0  './Movie.js';\
+\
+class App extends Component \{\
+\
+
+\f2\i   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\}\
+\
+  componentDidMount() \{\
+    fetch('https://yts.am/api/v2/list_movies.json?sort_by=rating')\
+    .then(movieData => movieData.json())\
+    .then(json => console.log(json))\
+    .catch(err => console.log(err))\
+  \}\
+  \
+  _renderMoives = () => \{\
+    const movies =
+\f2\i  this
+\f0\i0 .state.movies.map((movie, movieIndex) => \{\
+
+\f2\i       return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.poster\} 
+\f2\i key
+\f0\i0 =\{movieIndex\} />\
+    \})\
+
+\f2\i     return
+\f0\i0  movies\
+  \}\
+\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.movies ?
+\f2\i  this
+\f0\i0 ._renderMoives() : 'loading...'\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Await, Async\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 *
+\f1 \'c8\'ad\'bb\'ec\'c7\'a5
+\f0  
+\f1 \'c7\'a5\'bd\'c3
+\f0  (=>) 
+\f1 \'b4\'c2
+\f0  return 
+\f1 \'c0\'db\'bc\'ba\'c7\'d2
+\f0  
+\f1 \'c7\'ca\'bf\'e4\'b0\'a1
+\f0  
+\f1 \'be\'f8\'b4\'d9
+\f0 . 
+\f1 \'c0\'da\'b5\'bf\'c0\'cc\'b9\'c7\'b7\'ce
+\f0 \
+
+\f1 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'c0\'c7
+\f0  key
+\f1 \'b4\'c2
+\f0  
+\f1 \'c0\'ce\'b5\'a6\'bd\'ba\'b8\'a6
+\f0  
+\f1 \'bb\'e7\'bf\'eb\'c7\'cf\'b4\'c2
+\f0  
+\f1 \'b0\'cd\'c0\'cc
+\f0  
+\f1 \'c1\'c1\'c1\'f6
+\f0  
+\f1 \'be\'ca\'b4\'d9
+\f0 . 
+\f1 \'b4\'c0\'b8\'ae\'b0\'c5\'b5\'e7
+\f0 \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  './App.css';\
+
+\f2\i import
+\f0\i0  Movie
+\f2\i  from
+\f0\i0  './Movie.js';\
+\
+class App extends Component \{\
+\
+
+\f2\i   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\}\
+\
+  componentDidMount() \{\
+
+\f2\i     this
+\f0\i0 ._getMovies();\
+  \}\
+  \
+  _renderMoives = () => \{\
+    const movies =
+\f2\i  this
+\f0\i0 .state.movies.map((movie) => \{\
+
+\f2\i       return
+\f0\i0  <Movie 
+\f2\i title
+\f0\i0 =\{movie.title\} 
+\f2\i poster
+\f0\i0 =\{movie.large_cover_image\} 
+\f2\i key
+\f0\i0 =\{movie.id\} />\
+    \})\
+
+\f2\i     return
+\f0\i0  movies\
+  \}\
+\
+  _getMovies = async () => \{\
+    const movies =
+\f2\i  await this
+\f0\i0 ._callApi()\
+
+\f2\i     this
+\f0\i0 .setState(\{\
+      movies\
+    \})\
+  \}\
+\
+  _callApi = () => \{\
+
+\f2\i     return
+\f0\i0  fetch('https://yts.am/api/v2/list_movies.json?sort_by=rating')\
+    .then(movieData => movieData.json())\
+    .then(json => json.data.movies)\
+    .catch(err => console.log(err))\
+  \}\
+\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.movies ?
+\f2\i  this
+\f0\i0 ._renderMoives() : 'loading...'\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 className and basic HTML in ReactJS\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\uc0\u8232 App.js ->\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React, \{ Component \}
+\f2\i  from
+\f0\i0  'react';\
+
+\f2\i import
+\f0\i0  './App.css';\
+
+\f2\i import
+\f0\i0  Movie
+\f2\i  from
+\f0\i0  './Movie.js';\
+\
+class App extends Component \{\
+\
+
+\f2\i   // Render: componentWillMount() -> render() - > componentDidMount()
+\f0\i0 \
+
+\f2\i   // Update: componentWillReceivedProps() - > shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate()
+\f0\i0 \
+\
+  state = \{\}\
+\
+  componentDidMount() \{\
+
+\f2\i     this
+\f0\i0 ._getMovies();\
+  \}\
+  \
+  _renderMoives = () => \{\
+    const movies =
+\f2\i  this
+\f0\i0 .state.movies.map((movie) => \{\
+
+\f2\i       // console.log(movie)
+\f0\i0 \
+
+\f2\i       return
+\f0\i0  <Movie \
+        
+\f2\i title
+\f0\i0 =\{movie.title_english\} \
+        
+\f2\i poster
+\f0\i0 =\{movie.medium_cover_image\} \
+        
+\f2\i key
+\f0\i0 =\{movie.id\}\
+        
+\f2\i genres
+\f0\i0 =\{movie.genres\}\
+        
+\f2\i synopsis
+\f0\i0 =\{movie.synopsis\}\
+      />\
+    \})\
+
+\f2\i     return
+\f0\i0  movies\
+  \}\
+\
+  _getMovies = async () => \{\
+    const movies =
+\f2\i  await this
+\f0\i0 ._callApi()\
+
+\f2\i     this
+\f0\i0 .setState(\{\
+      movies\
+    \})\
+  \}\
+\
+  _callApi = () => \{\
+
+\f2\i     return
+\f0\i0  fetch('https://yts.am/api/v2/list_movies.json?sort_by=rating')\
+    .then(movieData => movieData.json())\
+    .then(json => json.data.movies)\
+    .catch(err => console.log(err))\
+  \}\
+\
+  render() \{\
+
+\f2\i     return
+\f0\i0  (\
+      <div 
+\f2\i className
+\f0\i0 ="App">\
+        \{
+\f2\i this
+\f0\i0 .state.movies ?
+\f2\i  this
+\f0\i0 ._renderMoives() : 'loading...'\}\
+      </div>\
+    );\
+  \}\
+\}\
+\
+
+\f2\i export default
+\f0\i0  App;\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Movie.js ->\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  React
+\f2\i  from
+\f0\i0  'react';\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f2\i \cf0 import
+\f0\i0  PropTypes
+\f2\i  from
+\f0\i0  'prop-types';\
+
+\f2\i import
+\f0\i0  './Movie.css';\
+\
+\
+function Movie(\{title, poster, genres, synopsis\}) \{\
+
+\f2\i   return
+\f0\i0  (\
+    <div 
+\f2\i className
+\f0\i0 ="Movie">\
+      <div 
+\f2\i className
+\f0\i0 ="Movie__Columns">\
+        <MoviePoster 
+\f2\i poster
+\f0\i0 =\{poster\} 
+\f2\i alt
+\f0\i0 =\{title\} />\
+      </div>\
+      <div 
+\f2\i className
+\f0\i0 ="Movie__Columns">\
+        <h1>\{title\}</h1>\
+        <div 
+\f2\i className
+\f0\i0 ="Movie__Genres">\
+          \{genres.map((genre, index) => <MovieGenre 
+\f2\i genre
+\f0\i0 =\{genre\} 
+\f2\i key
+\f0\i0 =\{index\} />)\}\
+        </div>\
+        <p 
+\f2\i className
+\f0\i0 ="Movie__Synopsis">\
+          \{synopsis\}\
+        </p>\
+      </div>\
+    </div>\
+  );\
+\}\
+\
+function MoviePoster(\{poster, alt\}) \{\
+
+\f2\i   return
+\f0\i0  (\
+    <img 
+\f2\i src
+\f0\i0 =\{poster\} 
+\f2\i alt
+\f0\i0 =\{alt\} 
+\f2\i title
+\f0\i0 =\{alt\} 
+\f2\i className
+\f0\i0 ="Movie__Poster" />\
+  );\
+\}\
+\
+function MovieGenre(\{genre\}) \{\
+
+\f2\i   return
+\f0\i0  (\
+    <span 
+\f2\i className
+\f0\i0 ="Movie__Genre">\{genre\}</span>\
+  );\
+\}\
+\
+Movie.propTypes = \{\
+  title: PropTypes.string.isRequired,\
+  poster: PropTypes.string.isRequired,\
+  genres: PropTypes.array.isRequired,\
+  synopsis: PropTypes.string.isRequired\
+\}\
+\
+MoviePoster.propTypes = \{\
+  poster: PropTypes.string.isRequired,\
+  alt: PropTypes.string.isRequired\
+\}\
+\
+MovieGenre.propTypes = \{\
+  genre: PropTypes.string.isRequired\
+\}\
+\
+
+\f2\i export default
+\f0\i0  Movie;\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1 \cf0 \'c7\'c1\'b7\'d3\'bd\'ba
+\f0  
+\f1 \'c3\'df\'b0\'a1
+\f0  -> 
+\f1 \'b7\'b9\'c1\'f6\'bd\'ba\'c5\'cd
+\f0  -> 
+\f1 \'ba\'a3\'c0\'cc\'c1\'f7
+\f0  HTML
+\f1 \'b8\'b6\'c5\'a9\'be\'f7
+\f0  -> array
+\f1 \'b8\'ca\'c7\'ce
+\f0 \
+\
+->  alt 
+\f1 \'c7\'c1\'b7\'d3
+\f0  
+\f1 \'c3\'df\'b0\'a1
+\f0  -> Functional 
+\f1 \'c4\'c4\'c6\'f7\'b3\'cd\'c6\'ae\'b7\'ce
+\f0 , 
+\f1 \'b0\'a3\'b4\'dc\'c7\'d1
+\f0  span
+\f1 \'c0\'bb
+\f0  
+\f1 \'b8\'ae\'c5\'cf\'c7\'cf\'b0\'d4
+\f0  
+\f1 \'b2\'fb
+\f0  
+\f1 \'b8\'b8\'b5\'e9\'b1\'e2
+\f0 \
+\
+\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+}
