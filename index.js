@@ -12,6 +12,37 @@ const what = "antonio";
 console.log(what);
 */
 
-// Boolern true: 1 false : 0
+/* Boolern true: 1 false : 0
 const wat = true;
 console.log(wat);
+*/
+
+/* Number
+const wat = 555;
+console.log(wat);
+*/
+
+/* Float 소수점을 가지고 있다.
+const wat = 55.1;
+*/
+
+/* 데이터를 정렬하는 방법 1.array 2.object
+const henoInfo = {
+  name: "heno",
+  age: 38,
+  gender: "Male",
+  isHandosem: true,
+  favFoods: ["apple", "Cheeze", "Pizza"],
+  favMovies: [
+    {
+      name: "King", 
+      fatty: false
+    }, 
+    {
+      name: "Man of black", 
+      fatty: true
+    }
+  ]
+}
+console.log(henoInfo);
+*/
