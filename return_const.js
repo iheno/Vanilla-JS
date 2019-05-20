@@ -3,5 +3,7 @@ function sayHello(name, age) {
   return `Hello ${name} you are ${age} years old.`;
 }
 
-const greetHeno = sayHello("Heno", 14)
+const greetHeno = sayHello("Heno", 39)
+
 console.log(greetHeno)
+
