@@ -47,8 +47,16 @@ const henoInfo = {
 console.log(henoInfo);
 */
 
+/*
 function SayHello() {
   console.log('Hello!')
 }
 
 SayHello();
+*/
+
+function sayHello(name, age){
+  console.log('Hello!', name, "You have", age, "yeras of age.");
+}
+
+sayHello("Heno!", 15);
