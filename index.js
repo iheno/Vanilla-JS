@@ -46,3 +46,9 @@ const henoInfo = {
 }
 console.log(henoInfo);
 */
+
+function SayHello() {
+  console.log('Hello!')
+}
+
+SayHello();
