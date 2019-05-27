@@ -4,8 +4,23 @@ const toDoForm = document.querySelector(".js-toDoForm"),
 
 const TODO_LS = 'toDos';
 
-const toDos = [];
+let toDos = [];
 
+function deleteToDo(event) {
+  // console.dir(event.target.parentNode); //.target
+  const btn = event.target;
+  const li = btn.parentNode;
+  toDoList.removeChild(li);
+  // make a clean ToDO
+  // filter는  array의 모든 아이템을 통해 함수를 실행하고 그리고 true인 아이템들만 가지고 새로운 array를 만들고
+  const cleanToDos = toDos.filter(function(toDo){
+    //parseInt는  스트링을 숫자로 바꿀수 있다.
+    return toDo.id !== parseInt(li.id);
+  });
+  toDos = cleanToDos;
+  saveToDos();
+} 
+  
 function saveToDos() {
   // localStorage.setItem(TODO_LS, toDos);
   // 자바스크립트는 로컬스트로지에 있는 모든 데이터를 string으로 저장 하려고 한다. obeject 가 string 되게 만들려면 
@@ -19,6 +34,7 @@ function paintToDo(text) {
   const span = document.createElement("span");
   const newId = toDos.length + 1;
   delBtn.innerText = "✖︎";
+  delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(delBtn); // button inside the li
   li.appendChild(span); // span inside the li
@@ -47,7 +63,7 @@ function loadTodos() {
     //console.log(parsedToDos);
     // forEach는 기본적으로 함수를 실행하는데, array에 담겨있는 것들 각각에 한번씩 함수를 실행시켜 준다.
     parsedToDos.forEach(function(toDo){
-      paintToDo(toDo.text)
+      paintToDo(toDo.text);
     });   
   } 
 }
