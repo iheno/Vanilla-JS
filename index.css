@@ -43,6 +43,7 @@ h1 {
   color: #ffffff;
   background: none;
   border-radius: 5px;
+  border: 1px solid #ffffff;
 }
 .js-toDoList span{
   padding-left: 10px;
@@ -100,6 +101,13 @@ h1 {
   display: block;
 }
 
+.js-weather {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  font-size: 14px;
+}
 
 @keyframes fadeIn {
   from {
