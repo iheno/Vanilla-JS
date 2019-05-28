@@ -34,6 +34,7 @@ function paintToDo(text) {
   const span = document.createElement("span");
   const newId = toDos.length + 1;
   delBtn.innerText = "✖";
+  delBtn.title = "Delete a list";
   delBtn.addEventListener("click", deleteToDo);
   span.innerText = text;
   li.appendChild(delBtn); // button inside the li

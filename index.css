@@ -32,21 +32,33 @@ h1 {
 }
 
 .js-toDoList {
-  margin: 20px 0 0 0;
+  margin: 30px auto;
   padding: 0;
+  width: 300px;
 }
 .js-toDoList li {
   padding-bottom: 10px;
+  float: left;
+  padding-right: 10px;
 }
 
 .js-toDoList button {
   color: #ffffff;
   background: none;
   border-radius: 5px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+.js-toDoList button:hover{
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
 }
 .js-toDoList span{
   padding-left: 10px;
+  vertical-align: middle;
 }
 
 .form {
